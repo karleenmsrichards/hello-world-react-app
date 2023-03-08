@@ -98,7 +98,7 @@ h3 {
 }
 
 
-@media only screen and (min-width: 375) {
+@media only screen and (min-width: 375px) {
   .button-container {
     flex-direction: row;
     gap: 30px;
