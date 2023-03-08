@@ -1,10 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Climate+Crisis&family=Fraunces:opsz,wght@9..144,700&family=Hanken+Grotesk:wght@500;700;800&family=Inter:wght@400;700&family=Lexend+Deca&family=Montserrat:wght@500;700&family=Rock+Salt&display=swap');
+
 .App {
+  min-height: 100vh;
   text-align: center;
+  background-color: #282c34;
+}
+
+.App-with-background {
+  min-height: 100vh;
+  background-color: #f19ae0;
+  text-align: center;
+}
+
+.logo-container {
+  background-image: url("https://media.istockphoto.com/id/666181420/vector/defocused-blurred-motion-abstract-background-purple-fusia.jpg?s=612x612&w=0&k=20&c=GYMkUcD7G66drdks0noWYM-aEoZlyLc_8iiRGW31CH0=");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo-container {
+    animation: App-logo-container-spin infinite 20s linear;
+  }
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  background-image: url("https://media.istockphoto.com/id/666181420/vector/defocused-blurred-motion-abstract-background-purple-fusia.jpg?s=612x612&w=0&k=20&c=GYMkUcD7G66drdks0noWYM-aEoZlyLc_8iiRGW31CH0=");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -13,19 +40,22 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  padding-top: 30px;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes App-logo-container-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +65,53 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+span {
+  font-family: Rock Salt;
+  color: #cb00f5;
+}
+
+h3 {
+  color: #2b5ee1;
+}
+
+.hint-button {
+ background-color: #f78b10;
+}
+
+.trivia-answers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+button {
+  background-color: #f42ccc;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: white;
+  color: #8514d1;
+  text-decoration: underline;
+}
+
+.thanks-image {
+  width: 60px;
 }

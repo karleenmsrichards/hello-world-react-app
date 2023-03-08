@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState } from "react";
+import { ButtonComponent } from "./ButtonComponent.js";
+import { MainImage } from "./MainImage";
 
 function App() {
+  let [clickedHint, setClickedHint] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={clickedHint ? "App-with-background" : "App"}>
+      <main>
+        <MainImage />
+        <h1>
+          Hello World, I'm <span>Karleen</span>
+        </h1>
+        <h3>Guess my favourite colour?</h3>
+        <ButtonComponent
+          clickedHint={clickedHint}
+          setClickedHint={setClickedHint}
+        />
+      </main>
     </div>
   );
 }
